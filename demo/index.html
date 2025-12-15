@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GrinderNode Demo</title>
+    <link rel="stylesheet" href="../src/GrinderNode.css">
+    <style>body{font-family:Arial,Helvetica,sans-serif;padding:18px;background:#f6f7f8}</style>
+  </head>
+  <body>
+    <h2>GrinderNode Demo</h2>
+    <div id="app"></div>
+    <pre id="out"></pre>
+    <script type="module">
+      import {GrinderNode} from '../src/GrinderNode.js'
+
+      const g = new GrinderNode({title:'Coffee Grinder', initial:{grind:4}})
+      g.mount('#app')
+
+      const out = document.getElementById('out')
+      g.on('change', s => out.textContent = 'Change: ' + JSON.stringify(s))
+      g.on('grind', s => out.textContent = 'Grind event: ' + JSON.stringify(s))
+
+      // example: set state after 2s
+      setTimeout(()=> g.setState({grind:7}), 2000)
+    </script>
+  </body>
+ </html>

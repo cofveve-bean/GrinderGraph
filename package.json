@@ -1,0 +1,21 @@
+{
+  "name": "grindergraph",
+  "version": "1.0.0",
+  "description": "Visually design and deploy your perfect grind profile",
+  "homepage": "https://github.com/cofveve-bean/GrinderGraph#readme",
+  "bugs": {
+    "url": "https://github.com/cofveve-bean/GrinderGraph/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cofveve-bean/GrinderGraph.git"
+  },
+  "license": "ISC",
+  "author": "cofe ben",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "install": "node src/beans.png"
+  }
+}
